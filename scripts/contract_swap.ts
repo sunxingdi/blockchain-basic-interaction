@@ -128,7 +128,7 @@ async function makeTransaction() {
   const swap_txn = await router_contract.swapExactETHForTokens(
     0,                              // 函数参数：amountOutMin (滑点，slippage)
     [weth_address, usdt_address],   // 函数参数：path (WETH,TOKEN)
-    wallet_B.address,               // 函数参数：to (接收代币的地址)
+    wallet_A.address,               // 函数参数：to (接收代币的地址)
     Math.floor(Date.now() / 1000) + 3600, // 函数参数：Deadline 交易截止时间，设置为当前时间之后的一小时
     overrides // 交易参数
 )
